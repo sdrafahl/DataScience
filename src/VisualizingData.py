@@ -1,4 +1,5 @@
 from matplotlib import pyplot as plt
+from collections import Counter
 
 class VisualizingData:
 
@@ -19,4 +20,15 @@ class VisualizingData:
         plt.ylabel(ylabel)
         plt.title(title)
         plt.xticks([i + 0.5 for i, _ in enumerate(xCoords)], xCoords)
+        plt.show()
+
+    def displayDistributationGraph(self, values, rangeOfX, xlabel, ylabel, title):
+        decile = lambda lamb: lamb // 10 * 10
+        histogram = Counter(decile(lamb) for lamb in values)
+        plt.bar([x - 4 for x in histogram.keys()], histogram.values(), 8)
+        plt.axis([-5, 105, 0, 5])
+        plt.xticks([10 * i for i in range(rangeOfX + 1)])
+        plt.xlabel(xlabel)
+        plt.ylabel(ylabel)
+        plt.title(title)
         plt.show()
