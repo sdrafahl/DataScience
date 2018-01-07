@@ -41,6 +41,7 @@ class Vector:
             self.array[count] = self.array[count] * scalar
             count = count + 1
 
+
 def vectorSum(vectors):
     newVector = Vector()
     counter = 0
@@ -51,4 +52,11 @@ def vectorSum(vectors):
         newVector = newVector.addVector(vector)
         if(newVector == -1):
             return -1
+    return newVector
+
+def vectorMean(vectors):
+
+    length = len(vectors)
+    newVector = vectorSum(vectors)
+    newVector.scalarMultiply(1.0/length)
     return newVector

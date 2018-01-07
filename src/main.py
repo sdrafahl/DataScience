@@ -42,3 +42,9 @@ print "Scalar Multiply Vector 4"
 
 vector4.scalarMultiply(10)
 vector4.printVector()
+
+print "Vector Mean"
+
+vector5 = vectorMean(vectors)
+
+vector5.printVector()
