@@ -54,8 +54,18 @@ def vectorSum(vectors):
             return -1
     return newVector
 
-def vectorMean(vectors):
+def dotProduct(vector1, vector2):
+    product = 0
+    count = 0
+    if len(vector1.array) == len(vector2.array):
+        while count < len(vector1.array):
+            product = product + vector1.array[count] * vector2.array[count]
+            count = count + 1
+        return product
+    else:
+        return -1
 
+def vectorMean(vectors):
     length = len(vectors)
     newVector = vectorSum(vectors)
     newVector.scalarMultiply(1.0/length)

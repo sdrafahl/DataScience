@@ -48,3 +48,7 @@ print "Vector Mean"
 vector5 = vectorMean(vectors)
 
 vector5.printVector()
+
+print "Dot Product"
+
+print dotProduct(vector, vector2)
