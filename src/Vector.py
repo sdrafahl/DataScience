@@ -35,6 +35,12 @@ class Vector:
         else:
             return -1
 
+    def scalarMultiply(self, scalar):
+        count = 0
+        while count < len(self.array):
+            self.array[count] = self.array[count] * scalar
+            count = count + 1
+
 def vectorSum(vectors):
     newVector = Vector()
     counter = 0

@@ -37,3 +37,8 @@ vectors = [vector, vector2, vector3]
 
 vector4 = vectorSum(vectors)
 vector4.printVector()
+
+print "Scalar Multiply Vector 4"
+
+vector4.scalarMultiply(10)
+vector4.printVector()
