@@ -30,3 +30,10 @@ print "Vector 3 = Vector 2 + Vector 1"
 vector3 = vector.addVector(vector2)
 
 vector3.printVector()
+
+print "Vector Sum of Vector 1, Vector 2, Vector 3"
+
+vectors = [vector, vector2, vector3]
+
+vector4 = vectorSum(vectors)
+vector4.printVector()
