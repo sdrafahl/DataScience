@@ -18,7 +18,7 @@ class Statistics:
         return sum(self.dataList) / len(self.dataList)
 
     def valueOfQuantile(self, quantile):
-        index = (quantile * (len(self.dataList) - 1)) - 1
+        index = (quantile * (len(self.dataList) - 1))
         rightDecimal = index - (int(index) + 0.0)
         leftDecimal = 1 - rightDecimal
         return self.dataList[int(index)] * leftDecimal + self.dataList[int(index) + 1] * rightDecimal
