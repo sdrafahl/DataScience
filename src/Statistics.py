@@ -1,3 +1,5 @@
+import math
+
 class Statistics:
 
     def __init__(self):
@@ -20,3 +22,11 @@ class Statistics:
         rightDecimal = index - (int(index) + 0.0)
         leftDecimal = 1 - rightDecimal
         return self.dataList[int(index)] * leftDecimal + self.dataList[int(index) + 1] * rightDecimal
+
+    def standardDeviation(self):
+        n = self.numberOfValues()
+        sampleMean = sum(self.dataList)/n
+        sumValue = 0
+        for x in self.dataList:
+            sumValue += (x - sampleMean) ** 2
+        return math.sqrt((sumValue / n))
